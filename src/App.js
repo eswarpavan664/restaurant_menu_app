@@ -1,25 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+import MainNavigation from './navigations/main_navigation';
+import DisableRightClick from './helpers/DisableRightClick';
+import DetectDevTools from './helpers/DetectDevTools';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainNavigation/>
   );
 }
 
-export default App;
+export default DetectDevTools(DisableRightClick(App));
